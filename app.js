@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input')
 const ul = document.querySelector('ul');
 
-var apiKey = "aeb1e7ef095f34b93c1e98be0a5cd9f8";
+var apiKey = "secret";
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -66,11 +66,9 @@ form.addEventListener('submit', (e) => {
     .catch(() => {
         input.value = "Napačno mesto"
     });
-    
-    setTimeout(function () {
-        window.scrollTo({
-            top: 300,
-            behavior: 'smooth'
-        });
-    },45);
+
+
+    /* Form CSS properties*/
+    form.style.marginTop = "100px";
+    form.style.transition = "all .4s ease"
 })
