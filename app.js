@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input')
 const ul = document.querySelector('ul');
-const apiKey = config.apiKey;
+const apiKey = ApiKey;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
