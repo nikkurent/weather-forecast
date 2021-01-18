@@ -1,0 +1,152 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-blue: #022b3a;
+    --white: #f7f9f9;
+}
+
+body{
+    background-color: var(--white);
+}
+
+/* Form input section */
+form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 300px;
+}
+
+form input{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--text-blue);
+    font-size: 30px;
+    border-bottom: 2px solid var(--text-blue);
+}
+
+form input:focus{
+    border: 2px solid var(--text-blue);
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    transition: all .3s ease;
+}
+
+
+/* Weather Cards Section*/
+.box{
+    display: flex;
+    margin: 70px auto;
+    justify-content: space-around;
+}
+
+.cities {
+    list-style: none;
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--white);
+}
+
+.city{
+    background-color: var(--text-blue);
+    border-radius: 40px;
+    width: 230px;
+    height: 300px;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+#city-name{
+    font-size: 2.5em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: 400;
+}
+
+#city-icon{
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    width: 40%;
+    background-color: transparent;
+    color: var(--white)
+}
+
+#weather-desc{
+    position:absolute;
+    right: 25px;
+    top: 26%;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+#temp{
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15%;
+    left: 25px;
+}
+
+#feels_like{
+    position:absolute;
+    bottom: 8%;
+    left: 25px;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city{
+        width: 270px;
+        height: 350px;
+    }
+
+    #city-icon{
+        left: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cities {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -160px;
+    }
+
+    .city{
+        width: 280px;
+        height: 350px;
+    }
+
+    form input{
+        width: 80%;
+        margin-top: -360px;
+        font-size: 30px;
+        border-bottom: 2px solid var(--text-blue);
+    }
+
+    form input:hover{
+        border: 3px solid var(--text-blue);
+    }
+}
+
+
+
+
+
+
+
